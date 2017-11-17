@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-14T05:23:45.084Z</updated>
+  <updated>2017-11-17T08:23:57.003Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客初建成，谈一下感想吧！</title>
+    <link href="http://yoursite.com/2017/11/17/%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%BB%BA%E6%88%90%EF%BC%8C%E8%B0%88%E4%B8%80%E4%B8%8B%E6%84%9F%E6%83%B3%E5%90%A7%EF%BC%81/"/>
+    <id>http://yoursite.com/2017/11/17/博客初建成，谈一下感想吧！/</id>
+    <published>2017-11-17T03:00:19.000Z</published>
+    <updated>2017-11-17T08:23:57.003Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/assets/2017-11-17/me.jpg" class="itsme" width="170" title="这只就是我本人啦！！！"><h2 id="一，"><a href="#一，" class="headerlink" title="一，"></a>一，</h2><p>搭建个人博客这个想法从我刚刚开始接触前端就有了，感觉那是一件很cool的事，现在我就正在做这件很cool的事。  </p><h2 id="二，"><a href="#二，" class="headerlink" title="二，"></a>二，</h2><p>我是一名90后，我们这代人跟随着腾讯的小企鹅一起成长，从1999年的OICQ生到今天腾讯QQ，从飞车到英雄联盟（怪我生的晚之前的没玩过 罒ω罒），从天天酷跑到王者农药。<br>当然腾讯对我们影响最大的还是社交，我们喜欢用QQ，也习惯了QQ，多少年不见得老友都能通过QQ找回来。还有QQ空间，这可能是那个时候我们唯一能够发泄心情的地方了，随时随地的发个说说，A（某位朋友的口中@）一下某人，分享一下自己的苦与乐。然而在不知不觉中我们都更多的去使用<strong>微信</strong>，甚至认为用QQ是一件很low的事，添加朋友我们的首选变成了微信，求职发邮件也不敢再用QQ邮箱，一切都变了，变的那么快。<br>QQ变成了90后的情怀，QQ空间也是，微信变成了主流。<br>慢慢的我来到了大学，大家都一样，但我想不一样，我想有个自己的空间，安逸。<br>建立博客的想法逐渐产生。</p><h2 id="三，"><a href="#三，" class="headerlink" title="三，  "></a>三，  </h2><p>在我接触前端之前，建立个人博客只是一个想法，接触前端之后编程的实际行动。动手建站是在我第一份工作的时候，找到工作后就不需要话大量的时间去应对面试，工作之余也有了空闲，并且恰逢国庆，我可以安心的去做它。<br>原本以为这会花费好久的时间，没想到一天的功夫就搭起来了，这里要感谢<a href="http://www.cnfeat.com" target="_blank" rel="external">陈素封</a>的教程，从node到git,从申请域名到域名解析，基本都有详细的教程，推荐有建站想法的同学看看，迅速建立自己博客。  </p><h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>第一次用<strong>markdown</strong>语法，页面排版慢慢来，各位见谅，最后推荐一下有道云笔记的<strong>markdown</strong>编辑器，实时同步预览真心不错，还内置了各种语法，省时省力，懒人的福音！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;img src=&quot;/assets/2017-11-17/me.jpg&quot; class=&quot;itsme&quot; width=&quot;170&quot; title=&quot;这只就是我本人啦！！！&quot;&gt;
+&lt;h2 id=&quot;一，&quot;&gt;&lt;a href=&quot;#一，&quot; class=&quot;headerlink&quot; title=&quot;一，&quot;&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>first</title>
+    <link href="http://yoursite.com/2017/11/17/first/"/>
+    <id>http://yoursite.com/2017/11/17/first/</id>
+    <published>2017-11-17T02:55:38.000Z</published>
+    <updated>2017-11-17T02:56:30.858Z</updated>
+    
+    <content type="html"><![CDATA[<p>hello world!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;hello world!&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
