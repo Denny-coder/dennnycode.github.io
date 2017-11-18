@@ -4,13 +4,15 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/17/%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%BB%BA%E6%88%90%EF%BC%8C%E8%B0%88%E4%B8%80%E4%B8%8B%E6%84%9F%E6%83%B3%E5%90%A7%EF%BC%81/</loc>
-    <lastmod>2017-11-18T02:21:04.192Z</lastmod>
+    <loc>http://yoursite.com/2017/11/14/hello-world/</loc>
+    <lastmod>2017-11-18T02:27:17.754Z</lastmod>
     <data>
         <display>
-        <title>博客初建成，谈一下感想吧！</title>
-        <pubTime>2017-11-17T03:00:19.000Z</pubTime>
+        <title>Hello World</title>
+        <pubTime>2017-11-14T05:23:45.083Z</pubTime>
         
+        <tag>Hello World</tag>
+         
          
            
         </display>
@@ -20,12 +22,14 @@
     
   <url>
     <loc>http://yoursite.com/2017/11/17/first/</loc>
-    <lastmod>2017-11-17T02:56:30.858Z</lastmod>
+    <lastmod>2017-11-18T02:27:04.376Z</lastmod>
     <data>
         <display>
         <title>first</title>
         <pubTime>2017-11-17T02:55:38.000Z</pubTime>
         
+        <tag>杂谈</tag>
+         
          
            
         </display>
@@ -34,13 +38,15 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/14/hello-world/</loc>
-    <lastmod>2017-11-14T05:23:45.084Z</lastmod>
+    <loc>http://yoursite.com/2017/11/17/%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%BB%BA%E6%88%90%EF%BC%8C%E8%B0%88%E4%B8%80%E4%B8%8B%E6%84%9F%E6%83%B3%E5%90%A7%EF%BC%81/</loc>
+    <lastmod>2017-11-18T02:25:26.976Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2017-11-14T05:23:45.083Z</pubTime>
+        <title>博客初建成，谈一下感想吧！</title>
+        <pubTime>2017-11-17T03:00:19.000Z</pubTime>
         
+        <tag>杂谈</tag>
+         
          
            
         </display>
