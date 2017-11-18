@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-18T02:25:26.976Z</updated>
+  <updated>2017-11-18T03:55:39.457Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jsfiddle测试</title>
+    <link href="http://yoursite.com/2017/11/18/jsfiddle%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2017/11/18/jsfiddle测试/</id>
+    <published>2017-11-18T03:18:55.000Z</published>
+    <updated>2017-11-18T03:55:39.457Z</updated>
+    
+    <content type="html"><![CDATA[<iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/rrkg0k8h/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe><!-- <iframe scrolling="no" width="[width]" height="[height]" src="//jsfiddle.net/shorttag/embedded/[tabs]/[skin]" frameborder="0" allowfullscreen></iframe> –&gt;-->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe scrolling=&quot;no&quot; width=&quot;600&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net///jsfiddle.net/Denny_code/rrkg0k8h/embedded/js,resources,css,html,result
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>博客初建成，谈一下感想吧！</title>
