@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-04T08:59:27.448Z</updated>
+  <updated>2017-12-04T09:25:28.214Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Vue中的父子组件通信</title>
-    <link href="http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
-    <id>http://yoursite.com/2017/11/23/Vue中的父子组件通信/</id>
-    <published>2017-11-23T06:30:37.000Z</published>
-    <updated>2017-12-04T08:59:27.448Z</updated>
-    
-    <content type="html"><![CDATA[<p>Vue中父组件向子组件传值，主要依靠组件中的<strong><em>props</em></strong>属性，下面是一个局部组件栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/1x6k1npk/3/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe><br><a id="more"></a><br>这里是一个全局组件的栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/4zaapsda/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><p>那么子组件又如何向父组件传值呢？类比官网我们来看看下面的栗子：<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/bh33rkc4/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><ul><li>使用 <strong><em>$on(eventName)</em></strong> 监听事件</li><li>使用 <strong><em>$emit(eventName)</em></strong> 触发事件性  </li></ul><p>切记<strong>==不能用 $on 侦听子组件释放的事件，而必须在模板里直接用 v-on 绑定，参见下面的例子==。</strong><br>在本例中，子组件已经和它外部完全解耦了。它所做的只是报告自己的内部事件，因为父组件可能会关心这些事件。请注意这一点很重要。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Vue中父组件向子组件传值，主要依靠组件中的&lt;strong&gt;&lt;em&gt;props&lt;/em&gt;&lt;/strong&gt;属性，下面是一个局部组件栗子&lt;br&gt;&lt;iframe scrolling=&quot;no&quot; width=&quot;600&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net///jsfiddle.net/Denny_code/1x6k1npk/3/embedded/js,resources,css,html,result/light&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
-    
-  </entry>
   
   <entry>
     <title>jQuery中的下载</title>
@@ -56,6 +36,26 @@
     
     
       <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue中的父子组件通信</title>
+    <link href="http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
+    <id>http://yoursite.com/2017/11/23/Vue中的父子组件通信/</id>
+    <published>2017-11-23T06:30:37.000Z</published>
+    <updated>2017-12-04T08:59:27.448Z</updated>
+    
+    <content type="html"><![CDATA[<p>Vue中父组件向子组件传值，主要依靠组件中的<strong><em>props</em></strong>属性，下面是一个局部组件栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/1x6k1npk/3/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe><br><a id="more"></a><br>这里是一个全局组件的栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/4zaapsda/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><p>那么子组件又如何向父组件传值呢？类比官网我们来看看下面的栗子：<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/bh33rkc4/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><ul><li>使用 <strong><em>$on(eventName)</em></strong> 监听事件</li><li>使用 <strong><em>$emit(eventName)</em></strong> 触发事件性  </li></ul><p>切记<strong>==不能用 $on 侦听子组件释放的事件，而必须在模板里直接用 v-on 绑定，参见下面的例子==。</strong><br>在本例中，子组件已经和它外部完全解耦了。它所做的只是报告自己的内部事件，因为父组件可能会关心这些事件。请注意这一点很重要。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Vue中父组件向子组件传值，主要依靠组件中的&lt;strong&gt;&lt;em&gt;props&lt;/em&gt;&lt;/strong&gt;属性，下面是一个局部组件栗子&lt;br&gt;&lt;iframe scrolling=&quot;no&quot; width=&quot;600&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net///jsfiddle.net/Denny_code/1x6k1npk/3/embedded/js,resources,css,html,result/light&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
     
   </entry>
   
