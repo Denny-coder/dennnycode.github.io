@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/</loc>
+    
+    <lastmod>2017-12-15T06:51:39.692Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/12/14/vue%E7%AE%80%E6%98%93%E8%A1%A8%E6%A0%BC%E5%85%A8%E9%80%89/</loc>
     
     <lastmod>2017-12-14T08:58:10.282Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2017/11/23/jQuery%E4%B8%AD%E7%9A%84%E4%B8%8B%E8%BD%BD/</loc>
     
     <lastmod>2017-12-04T09:25:28.214Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/</loc>
-    
-    <lastmod>2017-12-04T08:59:27.448Z</lastmod>
     
   </url>
   
