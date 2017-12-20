@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-20T05:57:01.037Z</updated>
+  <updated>2017-12-20T07:15:23.982Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>类似表格的删除与添加</title>
+    <title></title>
     <link href="http://yoursite.com/2017/12/20/%E7%B1%BB%E4%BC%BC%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%88%A0%E9%99%A4%E4%B8%8E%E6%B7%BB%E5%8A%A0/"/>
     <id>http://yoursite.com/2017/12/20/类似表格的删除与添加/</id>
-    <published>2017-12-20T05:57:01.000Z</published>
-    <updated>2017-12-20T05:57:01.037Z</updated>
+    <published>2017-12-20T05:57:01.037Z</published>
+    <updated>2017-12-20T07:15:23.982Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: 类似表格的删除与添加<br>date: 2017-12-20 13:57:01</p><h2 id="tags-vue"><a href="#tags-vue" class="headerlink" title="tags: vue"></a>tags: vue</h2><p><strong>这是吐槽，可以跳过的</strong>，刚学习vue的时候用的第一个框架是elementUI，真的是爱不释手，公司的业务要求也没那么多，基本都能满足，现在不一样了，啥都得自己写了。怎么说呢，幸与不幸，幸运的是能够自己多动手动脑了，不幸的是貌似脑子不够用的。。。。<br>这个类表格，为什么要类表格呢？他虽然可以做成<strong>table</strong>,但因为很多人感觉<strong>table</strong>太low，所以大家都不怎么用，领导也不让用，于是我就用了这个类表格的称呼。<br>在一些业务场景中我们得让用户能对类表格能增加删除，假如我们用的是jQuery，这就是简单的字符串拼接和事件绑定，中间会有点小波折，比如<strong>事件委托</strong>（刚开始是真的头疼）。但是我们现在用的vue，我们不应该再去拼接一坨字符串，我们只要操作数据就行了，我的思路如下：</p><ol><li>创建一个数组对象 </li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">items: [&#123;</span><br><span class="line">       name: &apos;&apos;,   我</span><br><span class="line">       adds: &apos;&apos;,   在</span><br><span class="line">       tel: &apos;&apos;,    这</span><br><span class="line">     &#125;],           里</span><br></pre></td></tr></table></figure><ol><li>v-for进行循环，这一步对我来说比较难得就是v-model了，但现在看来就是一种顺其自然的舒心。(希望你也能体会到这种感觉)</li></ol><pre><code>&lt;div class=&quot;main&quot; v-for=&quot;(item, index) in items&quot;&gt;    &lt;div class=&quot;main-name&quot;&gt;        &lt;input type=&quot;text&quot; v-model=&quot;item.name&quot; :value=&quot;item.name&quot;&gt;    &lt;/div&gt;    &lt;div class=&quot;main-adds&quot;&gt;        &lt;input type=&quot;text&quot; v-model=&quot;item.adds&quot; :value=&quot;item.adds&quot;&gt;    &lt;/div&gt;    &lt;div class=&quot;main-tel&quot;&gt;        &lt;input type=&quot;text&quot; v-model=&quot;item.tel&quot; :value=&quot;item.tel&quot;&gt;    &lt;/div&gt;    &lt;div class=&quot;main-btn&quot;&gt;        &lt;button @click=&quot;add(index)&quot; v-if=&quot;index===len&quot;&gt;O&lt;/button&gt;        &lt;button @click=&quot;del(index)&quot; v-else&gt;X&lt;/button&gt;    &lt;/div&gt;&lt;/div&gt;</code></pre><ol><li>把增加删除方法写上。在这里我们还需要写上获取数组长度的方法以便调用，因为我们要判断在最后一个的时候显示添加按钮，另一个原因是v-for时<strong>貌似</strong>获取不了这个长度。</li></ol><p>大概就是这些了，想自己动手尝试的同学可以点击<a href="http://jsfiddle.net/Denny_code/1hejeh3w/" target="_blank" rel="external">这里</a></p><p>如果大家还有更好的方式，还请赐教，</p><p>代码拙劣，如有错误，望指出。  </p><blockquote><p>本人原创 如需转载请注明出处 </p></blockquote>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;title: 类似表格的删除与添加&lt;br&gt;date: 2017-12-20 13:57:01&lt;/p&gt;
+&lt;h2 id=&quot;tags-vue&quot;&gt;&lt;a href=&quot;#tags-vue&quot; class=&quot;headerlink&quot; title=&quot;tags: vue&quot;&gt;&lt;/a&gt;ta
+      
     
     </summary>
     
@@ -59,6 +68,26 @@
   </entry>
   
   <entry>
+    <title>Vue中的父子组件通信</title>
+    <link href="http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
+    <id>http://yoursite.com/2017/11/23/Vue中的父子组件通信/</id>
+    <published>2017-11-23T06:30:37.000Z</published>
+    <updated>2017-12-15T06:51:39.692Z</updated>
+    
+    <content type="html"><![CDATA[<p>Vue中父组件向子组件传值，主要依靠组件中的<strong><em>props</em></strong>属性，下面是一个局部组件栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/tuqv8bko/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe><br><a id="more"></a><br>这里是一个全局组件的栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/4zaapsda/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><p>那么子组件又如何向父组件传值呢？类比官网我们来看看下面的栗子：<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/bh33rkc4/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><ul><li>使用 <strong><em>$on(eventName)</em></strong> 监听事件</li><li>使用 <strong><em>$emit(eventName)</em></strong> 触发事件性  </li></ul><p>切记<strong>==不能用 $on 侦听子组件释放的事件，而必须在模板里直接用 v-on 绑定，参见下面的例子==。</strong><br>在本例中，子组件已经和它外部完全解耦了。它所做的只是报告自己的内部事件，因为父组件可能会关心这些事件。请注意这一点很重要。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Vue中父组件向子组件传值，主要依靠组件中的&lt;strong&gt;&lt;em&gt;props&lt;/em&gt;&lt;/strong&gt;属性，下面是一个局部组件栗子&lt;br&gt;&lt;iframe scrolling=&quot;no&quot; width=&quot;600&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net///jsfiddle.net/Denny_code/tuqv8bko/embedded/js,resources,css,html,result/light&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>jQuery中的下载</title>
     <link href="http://yoursite.com/2017/11/23/jQuery%E4%B8%AD%E7%9A%84%E4%B8%8B%E8%BD%BD/"/>
     <id>http://yoursite.com/2017/11/23/jQuery中的下载/</id>
@@ -78,26 +107,6 @@
     
     
       <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue中的父子组件通信</title>
-    <link href="http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
-    <id>http://yoursite.com/2017/11/23/Vue中的父子组件通信/</id>
-    <published>2017-11-23T06:30:37.000Z</published>
-    <updated>2017-12-15T06:51:39.692Z</updated>
-    
-    <content type="html"><![CDATA[<p>Vue中父组件向子组件传值，主要依靠组件中的<strong><em>props</em></strong>属性，下面是一个局部组件栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/tuqv8bko/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe><br><a id="more"></a><br>这里是一个全局组件的栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/4zaapsda/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><p>那么子组件又如何向父组件传值呢？类比官网我们来看看下面的栗子：<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///jsfiddle.net/Denny_code/bh33rkc4/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><ul><li>使用 <strong><em>$on(eventName)</em></strong> 监听事件</li><li>使用 <strong><em>$emit(eventName)</em></strong> 触发事件性  </li></ul><p>切记<strong>==不能用 $on 侦听子组件释放的事件，而必须在模板里直接用 v-on 绑定，参见下面的例子==。</strong><br>在本例中，子组件已经和它外部完全解耦了。它所做的只是报告自己的内部事件，因为父组件可能会关心这些事件。请注意这一点很重要。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Vue中父组件向子组件传值，主要依靠组件中的&lt;strong&gt;&lt;em&gt;props&lt;/em&gt;&lt;/strong&gt;属性，下面是一个局部组件栗子&lt;br&gt;&lt;iframe scrolling=&quot;no&quot; width=&quot;600&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net///jsfiddle.net/Denny_code/tuqv8bko/embedded/js,resources,css,html,result/light&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
     
   </entry>
   
