@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/12/20/类似表格的删除与添加/index.html">
 <meta property="og:site_name" content="Denny的博客">
 <meta property="og:description" content="这是吐槽，可以跳过的，刚学习vue的时候用的第一个框架是elementUI，真的是爱不释手，公司的业务要求也没那么多，基本都能满足，现在不一样了，啥都得自己写了。怎么说呢，幸与不幸，幸运的是能够自己多动手动脑了，不幸的是貌似脑子不够用的。。。。这个类表格，为什么要类表格呢？他虽然可以做成table,但因为很多人感觉table太low，所以大家都不怎么用，领导也不让用，于是我就用了这个类表格的称呼。">
-<meta property="og:updated_time" content="2017-12-20T09:53:17.945Z">
+<meta property="og:updated_time" content="2017-12-20T10:05:52.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="类似表格的删除与添加">
 <meta name="twitter:description" content="这是吐槽，可以跳过的，刚学习vue的时候用的第一个框架是elementUI，真的是爱不释手，公司的业务要求也没那么多，基本都能满足，现在不一样了，啥都得自己写了。怎么说呢，幸与不幸，幸运的是能够自己多动手动脑了，不幸的是貌似脑子不够用的。。。。这个类表格，为什么要类表格呢？他虽然可以做成table,但因为很多人感觉table太low，所以大家都不怎么用，领导也不让用，于是我就用了这个类表格的称呼。">
@@ -186,24 +186,8 @@
 <ol>
 <li>v-for进行循环，这一步对我来说比较难得就是v-model了，但现在看来就是一种顺其自然的舒心。(希望你也能体会到这种感觉)</li>
 </ol>
-<pre><code>&lt;div class=&quot;main&quot; v-for=&quot;(item, index) in items&quot;&gt;
-    &lt;div class=&quot;main-name&quot;&gt;
-        &lt;input type=&quot;text&quot; v-model=&quot;item.name&quot; :value=&quot;item.name&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;main-adds&quot;&gt;
-        &lt;input type=&quot;text&quot; v-model=&quot;item.adds&quot; :value=&quot;item.adds&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;main-tel&quot;&gt;
-        &lt;input type=&quot;text&quot; v-model=&quot;item.tel&quot; :value=&quot;item.tel&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;main-btn&quot;&gt;
-        &lt;button @click=&quot;add(index)&quot; v-if=&quot;index===len&quot;&gt;O&lt;/button&gt;
-        &lt;button @click=&quot;del(index)&quot; v-else&gt;X&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><ol>
-<li>把增加删除方法写上。在这里我们还需要写上获取数组长度的方法以便调用，因为我们要判断在最后一个的时候显示添加按钮，另一个原因是v-for时<strong>貌似</strong>获取不了这个长度。</li>
-</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;main&quot; v-for=&quot;(item, index) in items&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main-name&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; v-model=&quot;item.name&quot; :value=&quot;item.name&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main-adds&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; v-model=&quot;item.adds&quot; :value=&quot;item.adds&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main-tel&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; v-model=&quot;item.tel&quot; :value=&quot;item.tel&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main-btn&quot;&gt;</span><br><span class="line">        &lt;button @click=&quot;add(index)&quot; v-if=&quot;index===len&quot;&gt;O&lt;/button&gt;</span><br><span class="line">        &lt;button @click=&quot;del(index)&quot; v-else&gt;X&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">``` </span><br><span class="line">3. 把增加删除方法写上。在这里我们还需要写上获取数组长度的方法以便调用，因为我们要判断在最后一个的时候显示添加按钮，另一个原因是v-for时**貌似**获取不了这个长度。</span><br></pre></td></tr></table></figure>
+<p>  methods: {<br>    del: function(index) {<br>      this.items.splice(index, 1);<br>      this.geLength();<br>    },<br>    add: function(index) {<br>      this.items.splice(index, 0, {<br>        name: ‘’,<br>        adds: ‘’,<br>        tel: ‘’,<br>      });<br>      this.geLength();<br>    },<br>    geLength: function() {<br>      this.len = this.items.length - 1;<br>    }<br>  },<br>  created: function() {<br>    this.geLength();<br>  }<br>``` </p>
 <p>大概就是这些了，想自己动手尝试的同学可以点击<a href="http://jsfiddle.net/Denny_code/1hejeh3w/4" target="_blank" rel="external">这里</a></p>
 <p>如果大家还有更好的方式，还请赐教，</p>
 <p>代码拙劣，如有错误，望指出。  </p>
@@ -461,6 +445,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Hello World</a>
               </li>
              
@@ -469,15 +457,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
             <div class="clearfix"></div>
