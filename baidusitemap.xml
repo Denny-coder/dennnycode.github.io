@@ -4,6 +4,74 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/08/29/vue%E4%B8%ADselect%E7%BB%91%E5%AE%9A%E5%A4%9A%E4%B8%AA%E5%80%BC%E5%8F%8A%E5%9B%9E%E6%98%BE/</loc>
+    <lastmod>2019-08-29T06:20:32.654Z</lastmod>
+    <data>
+        <display>
+        <title>vue中select绑定多个值及回显</title>
+        <pubTime>2019-08-29T03:13:45.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/08/29/ionic-serve%E5%88%B7%E6%96%B0%E6%97%A0%E5%93%8D%E5%BA%94/</loc>
+    <lastmod>2019-08-29T06:20:11.538Z</lastmod>
+    <data>
+        <display>
+        <title>ionic serve刷新无响应</title>
+        <pubTime>2019-08-29T03:37:49.000Z</pubTime>
+        
+        <tag>ionic</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/08/29/%E5%88%9D%E8%A7%81%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2019-08-29T06:20:01.829Z</lastmod>
+    <data>
+        <display>
+        <title>初见微信小程序</title>
+        <pubTime>2019-08-29T05:55:00.000Z</pubTime>
+        
+        <tag>微信小程序</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/12/14/vue%E7%AE%80%E6%98%93%E8%A1%A8%E6%A0%BC%E5%85%A8%E9%80%89/</loc>
+    <lastmod>2019-08-29T03:20:36.895Z</lastmod>
+    <data>
+        <display>
+        <title>vue简易表格全选</title>
+        <pubTime>2017-12-14T08:50:37.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/12/20/%E7%B1%BB%E4%BC%BC%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%88%A0%E9%99%A4%E4%B8%8E%E6%B7%BB%E5%8A%A0/</loc>
     <lastmod>2019-08-29T02:49:44.808Z</lastmod>
     <data>
@@ -46,23 +114,6 @@
         <pubTime>2017-11-23T06:30:37.000Z</pubTime>
         
         <tag>jQuery</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/12/14/vue%E7%AE%80%E6%98%93%E8%A1%A8%E6%A0%BC%E5%85%A8%E9%80%89/</loc>
-    <lastmod>2017-12-14T08:58:10.282Z</lastmod>
-    <data>
-        <display>
-        <title>vue简易表格全选</title>
-        <pubTime>2017-12-14T08:50:37.000Z</pubTime>
-        
-        <tag>Vue</tag>
          
          
            

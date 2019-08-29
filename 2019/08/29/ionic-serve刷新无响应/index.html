@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: jQuery | Denny的博客</title>
+  <title>ionic serve刷新无响应 | Denny的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Denny的博客">
-<meta property="og:url" content="http://yoursite.com/tags/jQuery/index.html">
+  <meta name="description" content="cli packages: (C:\Users\Coder\AppData\Roaming\npm\node_modules)12@ionic/cli-utils  : 1.12.0ionic (Ionic CLI) : 3.12.0">
+<meta name="keywords" content="ionic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ionic serve刷新无响应">
+<meta property="og:url" content="http://yoursite.com/2019/08/29/ionic-serve刷新无响应/index.html">
 <meta property="og:site_name" content="Denny的博客">
-<meta property="og:description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
+<meta property="og:description" content="cli packages: (C:\Users\Coder\AppData\Roaming\npm\node_modules)12@ionic/cli-utils  : 1.12.0ionic (Ionic CLI) : 3.12.0">
+<meta property="og:updated_time" content="2019-08-29T06:20:11.538Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Denny的博客">
-<meta name="twitter:description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
+<meta name="twitter:title" content="ionic serve刷新无响应">
+<meta name="twitter:description" content="cli packages: (C:\Users\Coder\AppData\Roaming\npm\node_modules)12@ionic/cli-utils  : 1.12.0ionic (Ionic CLI) : 3.12.0">
   
     <link rel="alternative" href="/atom.xml" title="Denny的博客" type="application/atom+xml">
   
@@ -156,60 +158,215 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ionic-serve刷新无响应" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/23/jQuery中的下载/" class="archive-article-date">
-  	<time datetime="2017-11-23T06:30:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/23/jQuery中的下载/">jQuery中的下载</a>
+    <h1 class="article-title" itemprop="name">
+      ionic serve刷新无响应
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/29/ionic-serve刷新无响应/" class="archive-article-date">
+  	<time datetime="2019-08-29T03:37:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>cli packages: (C:\Users\Coder\AppData\Roaming\npm\node_modules)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@ionic/cli-utils  : 1.12.0</span><br><span class="line">ionic (Ionic CLI) : 3.12.0</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>global packages:</p>
+<pre><code>cordova (Cordova CLI) : 6.5.0
+</code></pre><p>local packages:</p>
+<pre><code>@ionic/app-scripts : 3.2.3
+Cordova Platforms  : android 6.1.2 browser 4.1.0
+Ionic Framework    : ionic-angular 3.9.2
+</code></pre><p>System:</p>
+<pre><code>Android SDK Tools : 25.2.5
+Node              : v10.15.0
+npm               : 6.3.0
+OS                : Windows 10
+</code></pre><p>Misc:</p>
+<pre><code>backend : pro
+</code></pre><p>以上为我的ionic环境<br>当使用ionic serve 启动时一刷新就会处于响应中的状态，后来尝试使用npm run ionic:serve时却意外的解决了该问题</p>
+<pre><code>启动过程中也遇到了下面的问题
+events.js:160
+  throw er; // Unhandled &apos;error&apos; event
+  ^
+
+Error: read ECONNRESET
+  at exports._errnoException (util.js:1026:11)
+  at TCP.onread (net.js:569:26)
+</code></pre><p>经<a href="https://github.com/ionic-team/ionic-cli/issues/2921" target="_blank" rel="external">查阅</a>可能是ws插件的bug引起<br>将ws升级至3.2.0即可解决，npm install ws@3.3.2   // 3.3.2的版本已经修复该bug<br>也有建议<code>npm install --save-dev @ionic/app-scripts@latest</code><br>在这个过程中发现似乎就算没有ws也能正常启动，很奇怪</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>啦啦啦，德玛西亚<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">ionic</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3a227DIBAFwPz/T6evrVrw2cWpZBierDgmjCvRvfB6xeP9bYzujr7/+9n5PKO7NwwMDIzHMt7TkXxnhVf9fPiLGBgYBzDmi0imThY02liT64s1Y2BgYAy2zvXXMQ8NMTAwMFYY1a05XygGBgbGShI7/7FRelktn308F8fAwHggozf1/1x/pL+BgYHxKMa7OJIZqklprwnx4ykMDIytGfkGl4d9vXS3GkpiYGCcw1iZtJpq9oLC6PVhYGBszVg/HjH/5BPzX/xNMDAwNmWstCF7jYQ5O7nbrAtiYGA8lpGEX/kR1V5o2DtkhoGBcSajN+4qnyWvGAMD4zRGHnj1tsveZloNUjEwMM5k5NtoNfjrHcu4+D4GBsYBjPWUMklx8zA0Wfqws4GBgbEdY6Xo1kuA7yq9YWBgnMOolsySlkD1qWrj4Q8MBgbGMYx8ifmxifzQRjWFxsDAOJOR9wR7xbh8I8438Vc1osTAwHggI29eVqn3JqsJGwMDY29GoqyW+/OmQs64mAEDA+MAxvo+XS3G3fsKMDAwTmCsHH3oJbd5WS36x4CBgbEpo3dUoteATBLdnIqBgXEOo1d0q5J6iWtvNgwMjF0ZvdBwPeCrFu8u3j0GBsYBjOqhijyA681fXS0GBgZGnrIm7YG8MFeIZzEwMDCK158ryV20BzAwMLZm5Nvl/Kk8Wc0bolHQiYGBsTWjmjpWD34Vzn3EBzWW+hsYGBhPYnwBOa2yUDN+EtEAAAAASUVORK5CYII=" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/08/29/初见微信小程序/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          初见微信小程序
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/08/29/vue中select绑定多个值及回显/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue中select绑定多个值及回显</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+  
+  <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2149178"></script>
+<!-- UY END -->
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -232,9 +389,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
