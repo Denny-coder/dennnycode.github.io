@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/</loc>
-    <lastmod>2018-06-05T14:10:44.375Z</lastmod>
+    <loc>http://yoursite.com/2017/12/20/%E7%B1%BB%E4%BC%BC%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%88%A0%E9%99%A4%E4%B8%8E%E6%B7%BB%E5%8A%A0/</loc>
+    <lastmod>2019-08-29T02:49:44.808Z</lastmod>
     <data>
         <display>
-        <title>Vue中的父子组件通信</title>
-        <pubTime>2017-11-23T06:30:37.000Z</pubTime>
+        <title>类似表格的删除与添加</title>
+        <pubTime>2017-12-20T05:57:01.000Z</pubTime>
         
         <tag>Vue</tag>
          
@@ -21,14 +21,14 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/18/jsfiddle%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2018-06-05T14:10:08.963Z</lastmod>
+    <loc>http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/</loc>
+    <lastmod>2019-08-29T01:01:20.417Z</lastmod>
     <data>
         <display>
-        <title>jsfiddle测试</title>
-        <pubTime>2017-11-18T03:18:55.000Z</pubTime>
+        <title>Vue中的父子组件通信</title>
+        <pubTime>2017-11-23T06:30:37.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>Vue</tag>
          
          
            
@@ -46,23 +46,6 @@
         <pubTime>2017-11-23T06:30:37.000Z</pubTime>
         
         <tag>jQuery</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/12/20/%E7%B1%BB%E4%BC%BC%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%88%A0%E9%99%A4%E4%B8%8E%E6%B7%BB%E5%8A%A0/</loc>
-    <lastmod>2017-12-21T09:22:25.924Z</lastmod>
-    <data>
-        <display>
-        <title>类似表格的删除与添加</title>
-        <pubTime>2017-12-20T05:57:01.000Z</pubTime>
-        
-        <tag>Vue</tag>
          
          
            
@@ -97,40 +80,6 @@
         <pubTime>2017-11-21T02:48:47.000Z</pubTime>
         
         <tag>http</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/11/14/hello-world/</loc>
-    <lastmod>2017-11-18T02:27:17.754Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-11-14T05:23:45.083Z</pubTime>
-        
-        <tag>Hello World</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/11/17/first/</loc>
-    <lastmod>2017-11-18T02:27:04.376Z</lastmod>
-    <data>
-        <display>
-        <title>first</title>
-        <pubTime>2017-11-17T02:55:38.000Z</pubTime>
-        
-        <tag>杂谈</tag>
          
          
            

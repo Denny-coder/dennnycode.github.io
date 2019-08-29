@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-21T09:22:25.924Z</updated>
+  <updated>2019-08-29T02:49:44.808Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2017/12/20/%E7%B1%BB%E4%BC%BC%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%88%A0%E9%99%A4%E4%B8%8E%E6%B7%BB%E5%8A%A0/"/>
     <id>http://yoursite.com/2017/12/20/类似表格的删除与添加/</id>
     <published>2017-12-20T05:57:01.000Z</published>
-    <updated>2017-12-21T09:22:25.924Z</updated>
+    <updated>2019-08-29T02:49:44.808Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>这是吐槽，可以跳过的</strong>，刚学习vue的时候用的第一个框架是elementUI，真的是爱不释手，公司的业务要求也没那么多，基本都能满足，现在不一样了，啥都得自己写了。怎么说呢，幸与不幸，幸运的是能够自己多动手动脑了，不幸的是貌似脑子不够用的。。。。<br>这个类表格，为什么要类表格呢？他虽然可以做成<strong>table</strong>,但因为很多人感觉<strong>table</strong>太low，所以大家都不怎么用，领导也不让用，于是我就用了这个类表格的称呼。<br>在一些业务场景中我们得让用户能对类表格能增加删除，假如我们用的是jQuery，这就是简单的字符串拼接和事件绑定，中间会有点小波折，比如<strong>事件委托</strong>（刚开始是真的头疼）。但是我们现在用的vue，我们不应该再去拼接一坨字符串，我们只要操作数据就行了，我的思路如下：<br><a id="more"></a></p><ol><li><p>创建一个数组对象 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">items: [&#123;</span><br><span class="line">       name: &apos;&apos;,   我</span><br><span class="line">       adds: &apos;&apos;,   在</span><br><span class="line">       tel: &apos;&apos;,    这</span><br><span class="line">     &#125;],           里</span><br></pre></td></tr></table></figure></li><li><p>v-for进行循环，这一步对我来说比较难得就是v-model了，但现在看来就是一种顺其自然的舒心。(希望你也能体会到这种感觉)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;main&quot; v-for=&quot;(item, index) in items&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main-name&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; v-model=&quot;item.name&quot; :value=&quot;item.name&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main-adds&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; v-model=&quot;item.adds&quot; :value=&quot;item.adds&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main-tel&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; v-model=&quot;item.tel&quot; :value=&quot;item.tel&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main-btn&quot;&gt;</span><br><span class="line">        &lt;button @click=&quot;add(index)&quot; v-if=&quot;index===len&quot;&gt;O&lt;/button&gt;</span><br><span class="line">        &lt;button @click=&quot;del(index)&quot; v-else&gt;X&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">```</span><br></pre></td></tr></table></figure></li><li><p>把增加删除方法写上。在这里我们还需要写上获取数组长度的方法以便调用，因为我们要判断在最后一个的时候显示添加按钮，另一个原因是v-for时<strong>貌似</strong>获取不了这个长度。  </p></li></ol><pre><code>methods: {  del: function(index) {    this.items.splice(index, 1);    this.geLength();  },  add: function(index) {    this.items.splice(index, 0, {      name: &apos;&apos;,      adds: &apos;&apos;,      tel: &apos;&apos;,    });    this.geLength();  },  geLength: function() {    this.len = this.items.length - 1;  }},created: function() {  this.geLength();}</code></pre><p>大概就是这些了，想自己动手尝试的同学可以点击<a href="http://jsfiddle.net/Denny_code/1hejeh3w/4" target="_blank" rel="external">这里</a></p><p>如果大家还有更好的方式，还请赐教，</p><p>代码拙劣，如有错误，望指出。  </p><blockquote><p>本人原创 如需转载请注明出处 <a href="http://bestzhengke.com/2017/12/20/%E7%B1%BB%E4%BC%BC%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%88%A0%E9%99%A4%E4%B8%8E%E6%B7%BB%E5%8A%A0/#more" target="_blank" rel="external">http://bestzhengke.com/2017/12/20/%E7%B1%BB%E4%BC%BC%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%88%A0%E9%99%A4%E4%B8%8E%E6%B7%BB%E5%8A%A0/#more</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><strong>这是吐槽，可以跳过的</strong>，刚学习vue的时候用的第一个框架是elementUI，真的是爱不释手，公司的业务要求也没那么多，基本都能满足，现在不一样了，啥都得自己写了。怎么说呢，幸与不幸，幸运的是能够自己多动手动脑了，不幸的是貌似脑子不够用的。。。。<br>这个类表格，为什么要类表格呢？他虽然可以做成<strong>table</strong>,但因为很多人感觉<strong>table</strong>太low，所以大家都不怎么用，领导也不让用，于是我就用了这个类表格的称呼。<br>在一些业务场景中我们得让用户能对类表格能增加删除，假如我们用的是jQuery，这就是简单的字符串拼接和事件绑定，中间会有点小波折，比如<strong>事件委托</strong>（刚开始是真的头疼）。但是我们现在用的vue，我们不应该再去拼接一坨字符串，我们只要操作数据就行了，我的思路如下：<br><a id="more"></a></p><ol><li><p>创建一个数组对象 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">items: [&#123;</span><br><span class="line">       name: &apos;&apos;,   我</span><br><span class="line">       adds: &apos;&apos;,   在</span><br><span class="line">       tel: &apos;&apos;,    这</span><br><span class="line">     &#125;],           里</span><br></pre></td></tr></table></figure></li><li><p>v-for进行循环，这一步对我来说比较难得就是v-model了，但现在看来就是一种顺其自然的舒心。(希望你也能体会到这种感觉)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;main&quot; v-for=&quot;(item, index) in items&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main-name&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; v-model=&quot;item.name&quot; :value=&quot;item.name&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main-adds&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; v-model=&quot;item.adds&quot; :value=&quot;item.adds&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main-tel&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; v-model=&quot;item.tel&quot; :value=&quot;item.tel&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main-btn&quot;&gt;</span><br><span class="line">        &lt;button @click=&quot;add(index)&quot; v-if=&quot;index===len&quot;&gt;O&lt;/button&gt;</span><br><span class="line">        &lt;button @click=&quot;del(index)&quot; v-else&gt;X&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">```</span><br></pre></td></tr></table></figure></li><li><p>把增加删除方法写上。在这里我们还需要写上获取数组长度的方法以便调用，因为我们要判断在最后一个的时候显示添加按钮，另一个原因是v-for时<strong>貌似</strong>获取不了这个长度。  </p></li></ol><pre><code>methods: {  del: function(index) {    this.items.splice(index, 1);    this.geLength();  },  add: function(index) {    this.items.splice(index, 0, {      name: &apos;&apos;,      adds: &apos;&apos;,      tel: &apos;&apos;,    });    this.geLength();  },  geLength: function() {    this.len = this.items.length - 1;  }},created: function() {  this.geLength();}</code></pre><p>大概就是这些了，想自己动手尝试的同学可以看这里<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/syr81cw0/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><p>如果大家还有更好的方式，还请赐教，</p><p>代码拙劣，如有错误，望指出。  </p><blockquote><p>本人原创 如需转载请注明出处 <a href="http://bestzhengke.com/2017/12/20/%E7%B1%BB%E4%BC%BC%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%88%A0%E9%99%A4%E4%B8%8E%E6%B7%BB%E5%8A%A0/#more" target="_blank" rel="external">http://bestzhengke.com/2017/12/20/%E7%B1%BB%E4%BC%BC%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%88%A0%E9%99%A4%E4%B8%8E%E6%B7%BB%E5%8A%A0/#more</a></p></blockquote>]]></content>
     
     <summary type="html">
     
@@ -65,26 +65,6 @@
   </entry>
   
   <entry>
-    <title>Vue中的父子组件通信</title>
-    <link href="http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
-    <id>http://yoursite.com/2017/11/23/Vue中的父子组件通信/</id>
-    <published>2017-11-23T06:30:37.000Z</published>
-    <updated>2018-06-05T14:10:44.375Z</updated>
-    
-    <content type="html"><![CDATA[<p>Vue中父组件向子组件传值，主要依靠组件中的<strong><em>props</em></strong>属性，下面是一个局部组件栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/tuqv8bko/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe><br><a id="more"></a><br>这里是一个全局组件的栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/4zaapsda/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><p>那么子组件又如何向父组件传值呢？类比官网我们来看看下面的栗子：<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/bh33rkc4/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><ul><li>使用 <strong><em>$on(eventName)</em></strong> 监听事件</li><li>使用 <strong><em>$emit(eventName)</em></strong> 触发事件性  </li></ul><p>切记<strong>==不能用 $on 侦听子组件释放的事件，而必须在模板里直接用 v-on 绑定，参见下面的例子==。</strong><br>在本例中，子组件已经和它外部完全解耦了。它所做的只是报告自己的内部事件，因为父组件可能会关心这些事件。请注意这一点很重要。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Vue中父组件向子组件传值，主要依靠组件中的&lt;strong&gt;&lt;em&gt;props&lt;/em&gt;&lt;/strong&gt;属性，下面是一个局部组件栗子&lt;br&gt;&lt;iframe scrolling=&quot;no&quot; width=&quot;600&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net///Denny_code/tuqv8bko/embedded/js,resources,css,html,result/light&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
     <title>jQuery中的下载</title>
     <link href="http://yoursite.com/2017/11/23/jQuery%E4%B8%AD%E7%9A%84%E4%B8%8B%E8%BD%BD/"/>
     <id>http://yoursite.com/2017/11/23/jQuery中的下载/</id>
@@ -104,6 +84,26 @@
     
     
       <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue中的父子组件通信</title>
+    <link href="http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
+    <id>http://yoursite.com/2017/11/23/Vue中的父子组件通信/</id>
+    <published>2017-11-23T06:30:37.000Z</published>
+    <updated>2019-08-29T01:01:20.417Z</updated>
+    
+    <content type="html"><![CDATA[<p>Vue中父组件向子组件传值，主要依靠组件中的<strong><em>props</em></strong>属性，下面是一个局部注册组件栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/m7aux16y/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe><br><a id="more"></a><br>这里是一个全局注册组件的栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/4zaapsda/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><p>那么子组件又如何向父组件传值呢？类比官网我们来看看下面的栗子：<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/bh33rkc4/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><ul><li>使用 <strong><em>$on(eventName)</em></strong> 监听事件</li><li>使用 <strong><em>$emit(eventName)</em></strong> 触发事件性  </li></ul><p>切记<strong>==不能用 $on 侦听子组件释放的事件，而必须在模板里直接用 v-on 绑定，参见下面的例子==。</strong><br>在本例中，子组件已经和它外部完全解耦了。它所做的只是报告自己的内部事件，因为父组件可能会关心这些事件。请注意这一点很重要。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Vue中父组件向子组件传值，主要依靠组件中的&lt;strong&gt;&lt;em&gt;props&lt;/em&gt;&lt;/strong&gt;属性，下面是一个局部注册组件栗子&lt;br&gt;&lt;iframe scrolling=&quot;no&quot; width=&quot;600&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net///Denny_code/m7aux16y/embedded/js,resources,css,html,result/light&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
     
   </entry>
   
@@ -133,29 +133,6 @@
   </entry>
   
   <entry>
-    <title>jsfiddle测试</title>
-    <link href="http://yoursite.com/2017/11/18/jsfiddle%E6%B5%8B%E8%AF%95/"/>
-    <id>http://yoursite.com/2017/11/18/jsfiddle测试/</id>
-    <published>2017-11-18T03:18:55.000Z</published>
-    <updated>2018-06-05T14:10:08.963Z</updated>
-    
-    <content type="html"><![CDATA[<iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/rrkg0k8h/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe><!-- <iframe scrolling="no" width="[width]" height="[height]" src="//jsfiddle.net/shorttag/embedded/[tabs]/[skin]" frameborder="0" allowfullscreen></iframe> –&gt;-->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;iframe scrolling=&quot;no&quot; width=&quot;600&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net///Denny_code/rrkg0k8h/embedded/js,resources,css,html,result/light&quot; frame
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>博客初建成，谈一下感想吧！</title>
     <link href="http://yoursite.com/2017/11/17/%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%BB%BA%E6%88%90%EF%BC%8C%E8%B0%88%E4%B8%80%E4%B8%8B%E6%84%9F%E6%83%B3%E5%90%A7%EF%BC%81/"/>
     <id>http://yoursite.com/2017/11/17/博客初建成，谈一下感想吧！/</id>
@@ -174,53 +151,6 @@
     
     
       <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>first</title>
-    <link href="http://yoursite.com/2017/11/17/first/"/>
-    <id>http://yoursite.com/2017/11/17/first/</id>
-    <published>2017-11-17T02:55:38.000Z</published>
-    <updated>2017-11-18T02:27:04.376Z</updated>
-    
-    <content type="html"><![CDATA[<p>hello world!</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;hello world!&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/11/14/hello-world/"/>
-    <id>http://yoursite.com/2017/11/14/hello-world/</id>
-    <published>2017-11-14T05:23:45.083Z</published>
-    <updated>2017-11-18T02:27:17.754Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-    
-      <category term="Hello World" scheme="http://yoursite.com/tags/Hello-World/"/>
     
   </entry>
   
