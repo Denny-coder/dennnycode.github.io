@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-03T07:37:57.284Z</updated>
+  <updated>2019-09-03T07:39:35.005Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,12 +21,21 @@
     <link href="http://yoursite.com/2019/09/03/iview%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6/"/>
     <id>http://yoursite.com/2019/09/03/iview表格合并/</id>
     <published>2019-09-03T07:37:57.000Z</published>
-    <updated>2019-09-03T07:37:57.284Z</updated>
+    <updated>2019-09-03T07:39:35.005Z</updated>
+    
+    <content type="html"><![CDATA[<p>刚开始用iviewUI框架，之前一直都是用elementUI,elementUI自带表格合并功能，这是个很常见的需求，我想当然认为iview也会有，结果傻眼了，百度了一通，发现了这个<a href="https://github.com/iview/iview/issues/442" target="_blank" rel="external">issue</a>,已经过去了两年半了，还没有结果，不知道作者为啥一直没有去实现这个特性。<br>下面是我实现的实现方式，目前能够满足我司的项目需求，如果您有其他需求，此例可作为一个思路。<br>如果您还有更好的实现方式，还请不吝赐教。</p><p><a href="https://codepen.io/denny-coder/pen/vYBedrG?editors=0010" target="_blank" rel="external">codepen</a></p><p><a href="https://jsfiddle.net/Denny_code/n96y7r51/" target="_blank" rel="external">jsfiddle</a></p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;刚开始用iviewUI框架，之前一直都是用elementUI,elementUI自带表格合并功能，这是个很常见的需求，我想当然认为iview也会有，结果傻眼了，百度了一通，发现了这个&lt;a href=&quot;https://github.com/iview/iview/issues
+      
+    
     </summary>
     
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
     
   </entry>
   
@@ -183,26 +192,6 @@
   </entry>
   
   <entry>
-    <title>Vue中的父子组件通信</title>
-    <link href="http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
-    <id>http://yoursite.com/2017/11/23/Vue中的父子组件通信/</id>
-    <published>2017-11-23T06:30:37.000Z</published>
-    <updated>2019-08-29T01:01:20.417Z</updated>
-    
-    <content type="html"><![CDATA[<p>Vue中父组件向子组件传值，主要依靠组件中的<strong><em>props</em></strong>属性，下面是一个局部注册组件栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/m7aux16y/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe><br><a id="more"></a><br>这里是一个全局注册组件的栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/4zaapsda/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><p>那么子组件又如何向父组件传值呢？类比官网我们来看看下面的栗子：<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/bh33rkc4/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><ul><li>使用 <strong><em>$on(eventName)</em></strong> 监听事件</li><li>使用 <strong><em>$emit(eventName)</em></strong> 触发事件性  </li></ul><p>切记<strong>==不能用 $on 侦听子组件释放的事件，而必须在模板里直接用 v-on 绑定，参见下面的例子==。</strong><br>在本例中，子组件已经和它外部完全解耦了。它所做的只是报告自己的内部事件，因为父组件可能会关心这些事件。请注意这一点很重要。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Vue中父组件向子组件传值，主要依靠组件中的&lt;strong&gt;&lt;em&gt;props&lt;/em&gt;&lt;/strong&gt;属性，下面是一个局部注册组件栗子&lt;br&gt;&lt;iframe scrolling=&quot;no&quot; width=&quot;600&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net///Denny_code/m7aux16y/embedded/js,resources,css,html,result/light&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
     <title>jQuery中的下载</title>
     <link href="http://yoursite.com/2017/11/23/jQuery%E4%B8%AD%E7%9A%84%E4%B8%8B%E8%BD%BD/"/>
     <id>http://yoursite.com/2017/11/23/jQuery中的下载/</id>
@@ -222,6 +211,26 @@
     
     
       <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue中的父子组件通信</title>
+    <link href="http://yoursite.com/2017/11/23/Vue%E4%B8%AD%E7%9A%84%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
+    <id>http://yoursite.com/2017/11/23/Vue中的父子组件通信/</id>
+    <published>2017-11-23T06:30:37.000Z</published>
+    <updated>2019-08-29T01:01:20.417Z</updated>
+    
+    <content type="html"><![CDATA[<p>Vue中父组件向子组件传值，主要依靠组件中的<strong><em>props</em></strong>属性，下面是一个局部注册组件栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/m7aux16y/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe><br><a id="more"></a><br>这里是一个全局注册组件的栗子<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/4zaapsda/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><p>那么子组件又如何向父组件传值呢？类比官网我们来看看下面的栗子：<br><iframe scrolling="no" width="600" height="300" src="//jsfiddle.net///Denny_code/bh33rkc4/embedded/js,resources,css,html,result/light" frameborder="0" allowfullscreen></iframe></p><ul><li>使用 <strong><em>$on(eventName)</em></strong> 监听事件</li><li>使用 <strong><em>$emit(eventName)</em></strong> 触发事件性  </li></ul><p>切记<strong>==不能用 $on 侦听子组件释放的事件，而必须在模板里直接用 v-on 绑定，参见下面的例子==。</strong><br>在本例中，子组件已经和它外部完全解耦了。它所做的只是报告自己的内部事件，因为父组件可能会关心这些事件。请注意这一点很重要。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Vue中父组件向子组件传值，主要依靠组件中的&lt;strong&gt;&lt;em&gt;props&lt;/em&gt;&lt;/strong&gt;属性，下面是一个局部注册组件栗子&lt;br&gt;&lt;iframe scrolling=&quot;no&quot; width=&quot;600&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net///Denny_code/m7aux16y/embedded/js,resources,css,html,result/light&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
     
   </entry>
   

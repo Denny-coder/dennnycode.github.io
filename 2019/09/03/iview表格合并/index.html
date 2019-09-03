@@ -8,16 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>iview表格合并 | Denny的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
+  <meta name="description" content="刚开始用iviewUI框架，之前一直都是用elementUI,elementUI自带表格合并功能，这是个很常见的需求，我想当然认为iview也会有，结果傻眼了，百度了一通，发现了这个issue,已经过去了两年半了，还没有结果，不知道作者为啥一直没有去实现这个特性。下面是我实现的实现方式，目前能够满足我司的项目需求，如果您有其他需求，此例可作为一个思路。如果您还有更好的实现方式，还请不吝赐教。 co">
+<meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iview表格合并">
 <meta property="og:url" content="http://yoursite.com/2019/09/03/iview表格合并/index.html">
 <meta property="og:site_name" content="Denny的博客">
-<meta property="og:description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
-<meta property="og:updated_time" content="2019-09-03T07:37:57.284Z">
+<meta property="og:description" content="刚开始用iviewUI框架，之前一直都是用elementUI,elementUI自带表格合并功能，这是个很常见的需求，我想当然认为iview也会有，结果傻眼了，百度了一通，发现了这个issue,已经过去了两年半了，还没有结果，不知道作者为啥一直没有去实现这个特性。下面是我实现的实现方式，目前能够满足我司的项目需求，如果您有其他需求，此例可作为一个思路。如果您还有更好的实现方式，还请不吝赐教。 co">
+<meta property="og:updated_time" content="2019-09-03T07:39:35.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iview表格合并">
-<meta name="twitter:description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
+<meta name="twitter:description" content="刚开始用iviewUI框架，之前一直都是用elementUI,elementUI自带表格合并功能，这是个很常见的需求，我想当然认为iview也会有，结果傻眼了，百度了一通，发现了这个issue,已经过去了两年半了，还没有结果，不知道作者为啥一直没有去实现这个特性。下面是我实现的实现方式，目前能够满足我司的项目需求，如果您有其他需求，此例可作为一个思路。如果您还有更好的实现方式，还请不吝赐教。 co">
   
     <link rel="alternative" href="/atom.xml" title="Denny的博客" type="application/atom+xml">
   
@@ -177,7 +178,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>刚开始用iviewUI框架，之前一直都是用elementUI,elementUI自带表格合并功能，这是个很常见的需求，我想当然认为iview也会有，结果傻眼了，百度了一通，发现了这个<a href="https://github.com/iview/iview/issues/442" target="_blank" rel="external">issue</a>,已经过去了两年半了，还没有结果，不知道作者为啥一直没有去实现这个特性。<br>下面是我实现的实现方式，目前能够满足我司的项目需求，如果您有其他需求，此例可作为一个思路。<br>如果您还有更好的实现方式，还请不吝赐教。</p>
+<p><a href="https://codepen.io/denny-coder/pen/vYBedrG?editors=0010" target="_blank" rel="external">codepen</a></p>
+<p><a href="https://jsfiddle.net/Denny_code/n96y7r51/" target="_blank" rel="external">jsfiddle</a></p>
+
       
 
       
@@ -216,6 +220,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -417,6 +432,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ionic</a>
               </li>
              
@@ -426,10 +445,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
