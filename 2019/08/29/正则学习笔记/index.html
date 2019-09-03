@@ -320,7 +320,7 @@
 <h5 id="匹配成对标签"><a href="#匹配成对标签" class="headerlink" title="匹配成对标签"></a>匹配成对标签</h5><p>要求匹配：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;regular expression&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">&lt;p&gt;laoyao bye bye&lt;/</span>p&gt;</span><br></pre></td></tr></table></figure>
 <p>不匹配：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;wrong!&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;wrong!<span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>匹配一个开标签，可以使用正则<code>&lt;[^&gt;]+&gt;</code>，<br>匹配一个闭标签，可以使用 <code>&lt;\/[^&gt;]+&gt;</code>，<br>但是要求匹配成对标签，那就需要使用反向引用，如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="regexp">/&lt;([^&gt;]+)&gt;[\d\D]*&lt;\/\1&gt;/</span>;</span><br><span class="line"><span class="keyword">var</span> string1 = <span class="string">"&lt;title&gt;regular expression&lt;/title&gt;"</span>;</span><br><span class="line"><span class="keyword">var</span> string2 = <span class="string">"&lt;p&gt;laoyao bye bye&lt;/p&gt;"</span>;</span><br><span class="line"><span class="keyword">var</span> string3 = <span class="string">"&lt;title&gt;wrong!&lt;/p&gt;"</span>;</span><br><span class="line"><span class="built_in">console</span>.log( regex.test(string1) ); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log( regex.test(string2) ); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log( regex.test(string3) ); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
 <p>其中开标签 <code>&lt;[\^&gt;]+&gt;</code> 改成 <code>&lt;([^&gt;]+)&gt;</code>，使用括号的目的是为了后面使用反向引用，<br>而提供分组。闭标签使用了反向引用，<code>&lt;\/\1&gt;</code>。<br>另外，<code>[\d\D]</code>的意思是，这个字符是数字或者不是数字，因此，也就是匹配任意字符的意思。</p>
@@ -437,6 +437,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/09/03/iview表格合并/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          iview表格合并
+        
+      </div>
+    </a>
   
   
     <a href="/2019/08/29/git常见命令/" id="article-nav-older" class="article-nav-link-wrap">
@@ -575,7 +584,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color1">ionic</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -583,11 +592,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ionic</a>
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -595,7 +604,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
               </li>
              
               <li class="article-tag-list-item">
