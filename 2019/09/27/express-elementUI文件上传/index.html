@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: git | Denny的博客</title>
+  <title>express+elementUI文件上传 | Denny的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Denny的博客">
-<meta property="og:url" content="http://yoursite.com/tags/git/index.html">
+  <meta name="description" content="1、 题记 在我刚毕业的时候做了一个毕业设计，说实话这个毕业设计基本就是个玩具项目，不过它让我了解到很多除前端以外的东西，了解了前后端的开发的不同、数据是如何交互、数据库设计、密码加密等等，让我学习了很多，但是这整个项目只有表单数据的交互，没有文件上传，也就是二进制流的操作。那时面试了几个公司，其中一家公司看到了我的毕业设计，问了一下Node.js和express，好巧不巧的只问了关于文件上传的怎">
+<meta name="keywords" content="express">
+<meta property="og:type" content="article">
+<meta property="og:title" content="express+elementUI文件上传">
+<meta property="og:url" content="http://yoursite.com/2019/09/27/express-elementUI文件上传/index.html">
 <meta property="og:site_name" content="Denny的博客">
-<meta property="og:description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
+<meta property="og:description" content="1、 题记 在我刚毕业的时候做了一个毕业设计，说实话这个毕业设计基本就是个玩具项目，不过它让我了解到很多除前端以外的东西，了解了前后端的开发的不同、数据是如何交互、数据库设计、密码加密等等，让我学习了很多，但是这整个项目只有表单数据的交互，没有文件上传，也就是二进制流的操作。那时面试了几个公司，其中一家公司看到了我的毕业设计，问了一下Node.js和express，好巧不巧的只问了关于文件上传的怎">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/27/uKw6df.png">
+<meta property="og:updated_time" content="2019-09-27T09:09:31.024Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Denny的博客">
-<meta name="twitter:description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
+<meta name="twitter:title" content="express+elementUI文件上传">
+<meta name="twitter:description" content="1、 题记 在我刚毕业的时候做了一个毕业设计，说实话这个毕业设计基本就是个玩具项目，不过它让我了解到很多除前端以外的东西，了解了前后端的开发的不同、数据是如何交互、数据库设计、密码加密等等，让我学习了很多，但是这整个项目只有表单数据的交互，没有文件上传，也就是二进制流的操作。那时面试了几个公司，其中一家公司看到了我的毕业设计，问了一下Node.js和express，好巧不巧的只问了关于文件上传的怎">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/27/uKw6df.png">
   
     <link rel="alternative" href="/atom.xml" title="Denny的博客" type="application/atom+xml">
   
@@ -156,60 +160,208 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-express-elementUI文件上传" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/29/git常见命令/" class="archive-article-date">
-  	<time datetime="2019-08-29T06:24:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/29/git常见命令/">git常见命令</a>
+    <h1 class="article-title" itemprop="name">
+      express+elementUI文件上传
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/09/27/express-elementUI文件上传/" class="archive-article-date">
+  	<time datetime="2019-09-27T09:02:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、 题记</p>
+<p>在我刚毕业的时候做了一个毕业设计，说实话这个毕业设计基本就是个玩具项目，不过它让我了解到很多除前端以外的东西，了解了前后端的开发的不同、数据是如何交互、数据库设计、密码加密等等，让我学习了很多，但是这整个项目只有表单数据的交互，没有文件上传，也就是二进制流的操作。那时面试了几个公司，其中一家公司看到了我的毕业设计，问了一下<strong>Node.js</strong>和<strong>express</strong>，好巧不巧的只问了关于文件上传的怎么实现，其他没咋问，很尴尬。<br>2、 功能实现</p>
+<p>今天终于抽出时间去研究了一下这个问题，百度了很多，在<a href="https://www.cnblogs.com/JobsOfferings/p/JonsOfferings_node_imgUp.html" target="_blank" rel="external">这里</a>找到了<strong>formidable</strong>这个npm包，然后根据文章进行了功能实现。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">router.post(<span class="string">'/upload'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> listenNumber = req.headers.referer<span class="comment">//.match(/\d+/)[0];</span></span><br><span class="line">    <span class="keyword">var</span> form = <span class="keyword">new</span> formidable.IncomingForm();<span class="comment">//既处理表单，又处理文件上传</span></span><br><span class="line">    <span class="comment">//设置文件上传文件夹/路径，__dirname是一个常量，为当前路径</span></span><br><span class="line">    <span class="keyword">let</span> uploadDir = path.resolve(__dirname, <span class="string">"../public"</span>);</span><br><span class="line">    form.uploadDir = uploadDir;<span class="comment">//本地文件夹目录路径</span></span><br><span class="line">    form.keepExtensions = <span class="literal">true</span>;</span><br><span class="line">    form.parse(req, (err, fields, files) =&gt; &#123;</span><br><span class="line">        <span class="keyword">let</span> oldPath = files.file.path;<span class="comment">//这里的路径是图片的本地路径</span></span><br><span class="line">        <span class="keyword">const</span> fileName = files.file.name</span><br><span class="line">        <span class="keyword">let</span> newPath = path.join(path.dirname(oldPath), fileName);</span><br><span class="line">        <span class="comment">//这里我传回一个下载此图片的Url</span></span><br><span class="line">        <span class="keyword">var</span> downUrl = listenNumber + <span class="string">"server/public/"</span> + fileName;<span class="comment">//这里是想传回图片的链接</span></span><br><span class="line">        fs.rename(oldPath, newPath, () =&gt; &#123;<span class="comment">//fs.rename重命名图片名称</span></span><br><span class="line">            res.send(&#123; <span class="attr">code</span>: <span class="number">50008</span>, <span class="attr">msg</span>: &#123; downUrl,fields, files &#125; &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>不过和文章里有点不同，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> oldPath = files.cover.path;<span class="comment">//文章中的</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> oldPath = files.file.path;<span class="comment">//实际我写的</span></span><br></pre></td></tr></table></figure></p>
+<p>这里我猜是可能是因为<strong>formidable</strong>内部有变化了，最后还是实现了，下面是我的项目目录结构，方便大家对上述代码的文件路径的理解，这里我试了好几遍才成功。。。</p>
+<p><img src="https://s2.ax1x.com/2019/09/27/uKw6df.png" alt="image"></p>
+<p>上传成功之后的返参是这样的</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"code"</span>: <span class="number">50008</span>,</span><br><span class="line">    <span class="attr">"msg"</span>: &#123;</span><br><span class="line">        <span class="attr">"downUrl"</span>: <span class="string">"http://localhost:9528/server/public/2GVVSPHJ61&#125;(0OSJH969EFQ.jpg"</span>,</span><br><span class="line">        <span class="attr">"fields"</span>: &#123;&#125;,</span><br><span class="line">        <span class="attr">"files"</span>: &#123;</span><br><span class="line">            <span class="attr">"file"</span>: &#123;</span><br><span class="line">                <span class="attr">"size"</span>: <span class="number">85268</span>,</span><br><span class="line">                <span class="attr">"name"</span>: <span class="string">"2GVVSPHJ61&#125;(0OSJH969EFQ.jpg"</span>,</span><br><span class="line">                <span class="attr">"type"</span>: <span class="string">"image/jpeg"</span>,</span><br><span class="line">                <span class="attr">"mtime"</span>: <span class="string">"2019-09-27T06:32:47.936Z"</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3、 功能部署</p>
+<p>代码部署相信大家都会，就是放到对应位置就行，这里的对应是指和nginx(我用的nginx)配置的路径相对应。<br>这里遇到了<a href="https://www.jianshu.com/p/3851c3d6eaf1?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="external">413 Request Entity Too Large</a>，</p>
+<ul>
+<li>可以选择在http{ }中设置：client_max_body_size 20m;</li>
+<li>也可以选择在server{ }中设置：client_max_body_size 20m;</li>
+<li>还可以选择在location{ }中设置：client_max_body_size 20m;</li>
+</ul>
+<p>以为解决完上述问题上传就没问题了，但是预览图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://student.bestzhengke.com/server/public/2GVVSPHJ61%7D(0OSJH969EFQ.jpg</span><br></pre></td></tr></table></figure></p>
+<p> 的时候始终404，根据经验八成还是nginx配置出了问题，最后搜到了<a href="https://blog.csdn.net/u012046881/article/details/80016831" target="_blank" rel="external">这篇文章</a>，发现如下注解：</p>
+<ol>
+<li>这个配置表示输入 localhost:8080/image/时会访问本机的/usr/local/static/image/ 目录（或G:\host\image\目录）</li>
+<li>如果没有/usr/local/static/image/目录则需要新建/usr/local/static/image/目录</li>
+</ol>
+<p>最后我在nginx加入如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location /server/public/ &#123;</span><br><span class="line">            root   /root/student/;    ##注意，此处如果是windows环境中，使用文件的绝对路径 G:/host/;</span><br><span class="line">            autoindex on;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>经过nginx转发之后就会变成这样<strong>/root/student/server/public/</strong>，刚好就对应着服务器中的文件所在的位置，于是就访问到了该资源。</p>
+<p>4、 总结</p>
+<p>在整个功能实现过程中，并没有遇到太多问题，大多数时间都是在调整这个文件的路径关系，也不知道为什么，感觉这个相对路径这么难。</p>
+<p>在写这个文章的时候我还有一点疑惑，同样都是启动了express服务，在本地开发的时候能够根据返回的路径直接访问上传后的图片，为什么部署之后就还得通过nginx配置之后才能访问呢？或许这个问题就是因为nginx引起的，所以还要由nginx解决吧。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>啦啦啦，德玛西亚<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">express</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aQW7EIAwF0N7/0tNtpark2860DTxWo1EUeFlY8M3HRzxeX0bv/++/87fdNjAwMB7LeC3H+pnkzeu5qv//ODsGBsYBjPUi1uUy/yd/W742DAwMjOSZdbnsvRMDAwNjXnDXpbPKS4ovBgYGRj5x9RC7Lrt/cBbHwMB4ICNP3X//91v6GxgYGI9ivIqjWgTzY+1kYGBg7M3IC1xCSt52V8HFwMA4k1GNxnoFtAooHFkxMDCOYVSfzA+c61mSYO4itsPAwNiUMQ/Cks1iHuQ12RgYGFszetn7/HCbNzVvA2BgYGzNyK9czC9G5A2Gm3uwGBgY/55RbUn2QrdJ46F8FsfAwNiOMWk0Tq6x5kHeqARjYGBswahe8Mq3g3mDM1n6xUfBwMDYlJEvrrpRm1y2aG4BMTAwNmVU24r5h+g9U73YUdjhYmBgPJaRb8XmBXrygS4+NwYGxtaMSbiWbwTz8pq3MzEwMM5kVAO1/LZD3iidlHIMDIxzGHmUNr+XVQ3aLtaJgYFxACM/slaPne8I4zAwMM5kVKO3yfE1n7EQwGFgYGzKeBVHHvFXSVVqFLRhYGBswcjHPCyrtgSSpZcxGBgYj2XkS+xdwsgbmaPtIwYGxgGM5EJYPn0etPWui2FgYGDkDYNeYNeL9po+DAyMgxl5YHdXc/QiqsPAwDiAMbnGWn2+10jAwMA4mVHdd1W3iUmUli9x1MjEwMB4HuMTW5QD8VQHo38AAAAASUVORK5CYII=" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/09/03/iview表格合并/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iview表格合并</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+  
+  <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2149178"></script>
+<!-- UY END -->
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -232,9 +384,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
