@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: http | Denny的博客</title>
+  <title>Nuxt项目部署 | Denny的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Denny的博客">
-<meta property="og:url" content="http://yoursite.com/tags/http/index.html">
+  <meta name="description" content="1.创建自己的项目，详情见  2.官网服务端渲染部署流程，详情见  部署 Nuxt.js 服务端渲染的应用不能直接使用 nuxt 命令，而应该先进行编译构建，然后再启动 Nuxt 服务，可通过以下两个命令来完成： 12nuxt buildnuxt start 推荐的 package.json 配置如下： 1234567891011&amp;#123;  &quot;name&quot;: &quot;my-app&quot;,  &quot;depen">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nuxt项目部署">
+<meta property="og:url" content="http://yoursite.com/2019/12/11/Nuxt项目部署/index.html">
 <meta property="og:site_name" content="Denny的博客">
-<meta property="og:description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
+<meta property="og:description" content="1.创建自己的项目，详情见  2.官网服务端渲染部署流程，详情见  部署 Nuxt.js 服务端渲染的应用不能直接使用 nuxt 命令，而应该先进行编译构建，然后再启动 Nuxt 服务，可通过以下两个命令来完成： 12nuxt buildnuxt start 推荐的 package.json 配置如下： 1234567891011&amp;#123;  &quot;name&quot;: &quot;my-app&quot;,  &quot;depen">
+<meta property="og:updated_time" content="2019-12-11T06:02:37.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Denny的博客">
-<meta name="twitter:description" content="前端菜鸟，但愿意学习，希望有大佬能带带我">
+<meta name="twitter:title" content="Nuxt项目部署">
+<meta name="twitter:description" content="1.创建自己的项目，详情见  2.官网服务端渲染部署流程，详情见  部署 Nuxt.js 服务端渲染的应用不能直接使用 nuxt 命令，而应该先进行编译构建，然后再启动 Nuxt 服务，可通过以下两个命令来完成： 12nuxt buildnuxt start 推荐的 package.json 配置如下： 1234567891011&amp;#123;  &quot;name&quot;: &quot;my-app&quot;,  &quot;depen">
   
     <link rel="alternative" href="/atom.xml" title="Denny的博客" type="application/atom+xml">
   
@@ -156,60 +158,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Nuxt项目部署" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/21/get与post请求你知道多少？/" class="archive-article-date">
-  	<time datetime="2017-11-21T02:48:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/21/get与post请求你知道多少？/">get与post请求你知道多少？</a>
+    <h1 class="article-title" itemprop="name">
+      Nuxt项目部署
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/12/11/Nuxt项目部署/" class="archive-article-date">
+  	<time datetime="2019-12-11T05:57:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 1.创建自己的项目，<a href="https://zh.nuxtjs.org/guide/installation" target="_blank" rel="external">详情见</a></p>
+<p> 2.官网<strong>服务端渲染部署</strong>流程，<a href="https://zh.nuxtjs.org/guide/commands" target="_blank" rel="external">详情见</a></p>
+<p> 部署 Nuxt.js 服务端渲染的应用不能直接使用 nuxt 命令，而应该先进行编译构建，然后再启动 Nuxt 服务，可通过以下两个命令来完成：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nuxt build</span><br><span class="line">nuxt start</span><br></pre></td></tr></table></figure>
+<p>推荐的 <code>package.json</code> 配置如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"my-app"</span>,</span><br><span class="line">  <span class="attr">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"nuxt"</span>: <span class="string">"latest"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"dev"</span>: <span class="string">"nuxt"</span>,</span><br><span class="line">    <span class="attr">"build"</span>: <span class="string">"nuxt build"</span>,</span><br><span class="line">    <span class="attr">"start"</span>: <span class="string">"nuxt start"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>提示： 建议将 <code>.nuxt</code> 加入 <code>.npmignore</code> 和 <code>.gitignore</code> 文件中。<br><a id="more"></a></p>
+<p>官网的介绍很简单，看的一脸懵逼，因为他并不像vue单页项目一样打包生成一个dist文件放到服务器就行，我们要将其打包，在服务器上创建一个项目文件夹取名<code>nuxt</code>(这个是任意的)，然后把下面四个文件或文件夹放到里面。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.nuxt</span><br><span class="line"><span class="keyword">static</span></span><br><span class="line">nuxt.config.js</span><br><span class="line">package.json</span><br></pre></td></tr></table></figure></p>
+<p>cd到该文件夹之后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start npm --name &quot;my-nuxt&quot; -- run start</span><br></pre></td></tr></table></figure></p>
+<p>在这一步中我遇到了奇怪的报错，是因为<code>\.nuxt\dist\server</code>文件下没有内容，然后又重新将上述四个文件或文件夹上传到<code>nuxt</code>文件夹，之后就成功了。</p>
+<p>网上的文章也有说执行下面命令的，例如<a href="https://segmentfault.com/a/1190000012774650" target="_blank" rel="external">思否</a>的这篇文章，很多文章都是参考了这篇，包括我。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start npm --name &quot;my-next&quot; -- run build</span><br></pre></td></tr></table></figure></p>
+<p>我想这个<code>run build</code>应该是将<strong>项目的所有文件</strong>放入服务器上，然后再去执行这个命令，而不是上面的四个文件或文件夹。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>啦啦啦，德玛西亚<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3ayY6DQAxF0fz/T9PbXjTkPrtoqVyXVZQBOESyPH0++Lh+HXefPn//7jW/yoJDhgwZ2zKux+P5O8+3Ra5y9ym/NxkyZJzDeA6jNRIPrLUzyJAhQwZh8MSR/0qGDBky3gi4nMfBMmTIkFErYmvNslq5+2ItLkOGjA0ZvOv+/69fmW/IkCFjK8YVHmRsSVI9/g66KxkyZIxm1AaQtbKz1Uoj9yNDhoyhjAUrDmGIJA078vjiyYMMGTK2ZXRaZvySnfULgpQhQ8ZsRlqs1tI+XganaaIMGTJOYKSXIWD+aHiCiB6rDBkyjmGQUpaHVILndeiXM8iQIWM0g6SAq4Jpp5RF55EhQ8ZQRrpmwYNsp7lPEkQZMmScwCAJHw+jKbJWyn75H2TIkDGaUVuSSJO8V0YIMmTIOIZRW31Im/jpcli8bCFDhoyhjDQc89viY9G0lP0jNZQhQ8ZoBmmE9RM7vrqBgiyvmGXIkLE5g6871EJnbRSaPlYZMmScwEiHl7WuVy2YLlu2kCFDxiAGT9rIO+mwIW3byZAh40xG2oBLS+JVAV2GDBnnMK7wqAXWYMErbMPJkCHjBEanQOUn5UVsv+iVIUPGVEanWc95/MkVBwYyZMg4gMEDH4/caVrJkTJkyJDBUzQeEPnSBhlnypAhQ0YacMlgspMyIpIMGTIOYPRXIsjqRhqOW5NYGTJkDGKkpePalQv+27gBJ0OGjAmMH+nn2xlbQLd8AAAAAElFTkSuQmCC" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/10/15/基于Vue的仿钉钉后台流程节点设置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于Vue的仿钉钉后台流程节点设置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+  
+  <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2149178"></script>
+<!-- UY END -->
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -232,9 +367,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
